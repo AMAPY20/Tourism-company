@@ -1,0 +1,51 @@
+@import './media-query';
+$main-color:#ff9c34;
+$second-color:#152B5A;
+
+@font-face{
+    font-family: "cairo";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+
+body{
+    font-family: "cairo", "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" !important;
+}
+
+header{
+    background-image: url(../images/piramide-jiza.jpg);
+    background-position: fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+.top-menu{
+    .navbar{
+        font-weight: bold;
+        margin-top: 15px;
+
+        .navbar-nav{
+            // justify-content: center;
+            li>a{
+                transition:all 0.4s ease;
+                
+                &:hover{
+                    color: $main-color !important;
+                    // border-bottom: 1px solid $main-color;
+                }
+            }
+        }
+
+        .nav-link{
+            color: $second-color !important;
+            padding-right: 60px !important;
+            
+        }
+
+        .navbar-collapse{
+            justify-content: flex-end;
+            margin-left: 50px;
+        }
+    }
+}
+
+
+

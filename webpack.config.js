@@ -7,6 +7,7 @@ module.exports = {
     main: path.resolve(__dirname, "./src/js/index.js"),
   },
   output: {
+    publicPath: "/",
     filename: "js/bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
@@ -29,6 +30,38 @@ module.exports = {
           "sass-loader",
         ],
       },
+
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputpath: "images",
+            },
+          },
+        ],
+      },
+
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts",
+              esModule: false,
+            },
+          },
+        ],
+      },
+
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
     ],
   },
 
@@ -37,8 +70,8 @@ module.exports = {
     // compress: true,
     port: 9000,
     writeToDisk: true,
-    stats: 'errors-only',
-    open:true,
+    stats: "errors-only",
+    open: true,
   },
 
   plugins: [
