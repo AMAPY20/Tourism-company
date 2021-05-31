@@ -3,12 +3,16 @@
     padding: 0 20px !important;
   }
   .top-menu .navbar .nav-link {
-    padding-right: 5px !important;
+    padding-right: 10px !important;
   }
 }
 @font-face {
   font-family: "cairo";
   src: url(../fonts/Cairo-Regular.ttf);
+}
+@font-face {
+  font-family: "Kufi";
+  src: url(../fonts/Lalezar-Regular.ttf);
 }
 body {
   font-family: "cairo", "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" !important;
@@ -18,26 +22,81 @@ header {
   background-image: url(../images/piramide-jiza.jpg);
   background-position: fixed;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 80vh;
 }
-
-.top-menu .navbar {
+header .top-menu .navbar {
   font-weight: bold;
   margin-top: 15px;
 }
-.top-menu .navbar .navbar-nav li > a {
+header .top-menu .navbar > a {
+  font-family: "kufi";
+  font-size: 25px;
+  color: #152B5A;
+}
+header .top-menu .navbar .navbar-nav li > a {
   transition: all 0.4s ease;
 }
-.top-menu .navbar .navbar-nav li > a:hover {
+header .top-menu .navbar .navbar-nav li > a:hover {
   color: #ff9c34 !important;
 }
-.top-menu .navbar .nav-link {
+header .top-menu .navbar .nav-link {
   color: #152B5A !important;
   padding-right: 60px !important;
 }
-.top-menu .navbar .navbar-collapse {
+header .top-menu .navbar .navbar-collapse {
   justify-content: flex-end;
   margin-left: 50px;
+}
+header section .intr-txt p {
+  width: 550px;
+  margin: 50px auto 100px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fefefe;
+}
+
+.our-service .title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #152B5A;
+  font-weight: 600;
+  position: relative;
+}
+.our-service .title h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #ff9c34;
+  bottom: 21px;
+  width: 120px;
+  border-bottom: 1px solid #ff9c34;
+  width: 100px;
+}
+.our-service .card-custom {
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-radius: 8px 8px 8px 8px;
+  width: 250px;
+  height: 330px;
+}
+.our-service .card-custom .icons {
+  color: #ff9c34;
+  font-size: 49px;
+  margin: 18px auto 5px;
+}
+.our-service .card-custom .card-body {
+  padding-top: 5px;
+}
+.our-service .card-custom .card-body h5 {
+  color: #152B5A;
+  font-size: 22px;
+  font-weight: 500;
+}
+.our-service .card-custom .card-body p {
+  color: #6F747E;
 }
 
 /*# sourceMappingURL=style.css.map */

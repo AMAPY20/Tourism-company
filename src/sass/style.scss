@@ -1,51 +1,132 @@
 @import './media-query';
 $main-color:#ff9c34;
 $second-color:#152B5A;
+$p-color:#fefefe;
+$p-card-color:#6F747E;
 
 @font-face{
     font-family: "cairo";
     src: url(../fonts/Cairo-Regular.ttf);
 }
 
+@font-face{
+    font-family: "Kufi";
+    src: url(../fonts/Lalezar-Regular.ttf);
+}
 body{
     font-family: "cairo", "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" !important;
 }
 
 header{
     background-image: url(../images/piramide-jiza.jpg);
+    
     background-position: fixed;
     background-size: cover;
-    min-height: 100vh;
-}
-.top-menu{
-    .navbar{
-        font-weight: bold;
-        margin-top: 15px;
+    min-height: 80vh;
+    
+    .top-menu{
+        .navbar{
+            font-weight: bold;
+            margin-top: 15px;
 
-        .navbar-nav{
-            // justify-content: center;
-            li>a{
-                transition:all 0.4s ease;
-                
-                &:hover{
-                    color: $main-color !important;
-                    // border-bottom: 1px solid $main-color;
+            >a{
+                font-family: "kufi";
+                font-size: 25px;
+                color: $second-color;
+            }
+
+            .navbar-nav{
+                // justify-content: center;
+                li>a{
+                    transition:all 0.4s ease;
+                    
+                    &:hover{
+                        color: $main-color !important;
+                        // border-bottom: 1px solid $main-color;
+                    }
                 }
             }
-        }
 
-        .nav-link{
-            color: $second-color !important;
-            padding-right: 60px !important;
-            
-        }
+            .nav-link{
+                color: $second-color !important;
+                padding-right: 60px !important;
+                
+            }
 
-        .navbar-collapse{
-            justify-content: flex-end;
-            margin-left: 50px;
+            .navbar-collapse{
+                justify-content: flex-end;
+                margin-left: 50px;
+            }
+        }
+    }
+
+    section{
+
+        .intr-txt{
+
+            p{
+                width: 550px;
+                margin: 50px auto 100px;
+                font-size: 20px;
+                font-weight: 400;
+                color: $p-color;
+            }
         }
     }
 }
 
+.our-service{
 
+    .title{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: $second-color;
+        font-weight: 600;
+        position: relative;
+        
+        h2{
+            &::after{
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 2px;
+                background-color: $main-color;
+                bottom: 21px;
+                width: 120px;
+                border-bottom: 1px solid $main-color;
+                width: 100px;
+            }
 
+        }
+    }
+    
+    .card-custom{
+        box-shadow: 0px 3px 15px 0px rgb(0 0 0 / 10%);
+        border-style: solid;
+        border-width: 0px 0px 0px 0px;
+        border-radius: 8px 8px 8px 8px;
+        width: 250px;
+        height: 330px;
+
+        .icons{
+            color: $main-color;
+            font-size: 49px;
+            margin: 18px auto 5px;
+        }
+
+        .card-body{
+            padding-top: 5px;
+
+            h5{
+                color: $second-color;
+                font-size: 22px;
+                font-weight: 500;
+            }
+
+            p{
+                color: $p-card-color;
+            }
+        }
+    }
+}
