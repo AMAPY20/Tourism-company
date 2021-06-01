@@ -2,6 +2,7 @@
 @import './colors-home-page';
 @import './titles-sections';
 @import './mixins';
+@import './custom';
 
 @font-face{
     font-family: "cairo";
@@ -22,7 +23,7 @@ body{
 
 .top-menu{
     background-image: url(../images/piramide-jiza.jpg);
-    background-position: fixed;
+    // background-position: fixed;
     background-size: cover;
     min-height: 100vh;
 
@@ -74,16 +75,22 @@ body{
 
     .txt{
         align-items: center;
-        color: $p-color;
+        color: $main-color;
         width: 500px;
         margin: 60px auto 0;
         padding: 20px;
         border: 1px solid ;
         border-radius: 8px;
+        border-color: $second-color;
         p{
             font-size: 25px;
-            font-weight: 600;
+            font-weight: 400;
+            text-shadow: 2px 2px ;
         }
+    }
+
+    .btn-primary{
+        margin: 10px 60px;
     }
 }
 
@@ -302,5 +309,11 @@ body{
                 }
             }
         }
+    }
+}
+
+.custom-breadcrumb{
+    a{
+        color: $second-color;
     }
 }

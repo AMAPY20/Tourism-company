@@ -80,6 +80,11 @@ module.exports = {
       filename: "index.html",
     }),
 
+    new HtmlWebpackPlugin({
+      template: "./src/login.html",
+      filename: "login.html",
+    }),
+
     new MiniCssExtractPlugin(),
   ],
 };
