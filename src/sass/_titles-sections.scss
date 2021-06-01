@@ -1,0 +1,26 @@
+@import './colors-home-page';
+.title{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: $second-color;
+        position: relative;
+        
+        h2{
+
+            font-size: 30px;
+            font-weight: 600;
+
+            &::after{
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 2px;
+                background-color: $main-color;
+                bottom: 14px;
+                width: 170px;
+                border-bottom: 1px solid $main-color;
+            }
+
+        }
+    }

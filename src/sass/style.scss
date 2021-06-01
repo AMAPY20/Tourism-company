@@ -1,8 +1,7 @@
 @import './media-query';
-$main-color:#ff9c34;
-$second-color:#152B5A;
-$p-color:#fefefe;
-$p-card-color:#6F747E;
+@import './colors-home-page';
+@import './titles-sections';
+@import './mixins';
 
 @font-face{
     font-family: "cairo";
@@ -15,6 +14,7 @@ $p-card-color:#6F747E;
 }
 body{
     font-family: "cairo", "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" !important;
+    // overflow: hidden;
 }
 
 header{
@@ -36,13 +36,13 @@ header{
             }
 
             .navbar-nav{
-                // justify-content: center;
+        
                 li>a{
                     transition:all 0.4s ease;
                     
                     &:hover{
                         color: $main-color !important;
-                        // border-bottom: 1px solid $main-color;
+                        
                     }
                 }
             }
@@ -77,42 +77,31 @@ header{
 
 .our-service{
 
-    .title{
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: $second-color;
-        font-weight: 600;
-        position: relative;
-        
-        h2{
-            &::after{
-                content: "";
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                height: 2px;
-                background-color: $main-color;
-                bottom: 21px;
-                width: 120px;
-                border-bottom: 1px solid $main-color;
-                width: 100px;
-            }
+    background-image: url(/src/images/Background-our-servicepng.png);
+    
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-        }
+
+    .overlay{
+        background-color: rgba(243, 243, 243, 0.932);
     }
     
     .card-custom{
+        // background-color: $second-color;
         box-shadow: 0px 3px 15px 0px rgb(0 0 0 / 10%);
         border-style: solid;
         border-width: 0px 0px 0px 0px;
-        border-radius: 8px 8px 8px 8px;
-        width: 250px;
-        height: 330px;
+        border-radius: 10px 10px 10px 10px;
+        margin: 0 auto;
+        width: 350px;
+        height: 300px;
 
         .icons{
             color: $main-color;
             font-size: 49px;
-            margin: 18px auto 5px;
+            margin: 30px auto 14px;
         }
 
         .card-body{
@@ -121,11 +110,176 @@ header{
             h5{
                 color: $second-color;
                 font-size: 22px;
-                font-weight: 500;
+                font-weight: 600;
             }
 
             p{
                 color: $p-card-color;
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+.sightseeing-tours{
+    
+    margin-bottom: 20px;
+    .card{
+        box-shadow: 0px 3px 15px 0px rgb(0 0 0 / 10%);
+        border-style: solid;
+        border-width: 0px 0px 0px 0px;
+        border-radius: 10px 0 0 10px;
+        
+
+        .images{
+            width: 100%;
+            border-radius: 0 10px 10px 0 ;
+
+            &:hover{
+                cursor: pointer;
+                transition-duration: .3s;
+                transition-property: transform;
+                transition-timing-function: ease-out;
+            }
+        }
+
+        .card-body{
+            h5{
+                color: $second-color;
+                font-weight: 600;
+                font-size: 25px;
+                // margin-right: 20px;
+            }
+
+            .location{
+                color: $main-color;
+                
+            }
+
+            p{
+                color: $p-card-color;
+                font-size: 18px;
+                padding-top: 8px;
+            }
+
+            .header{
+                position: relative;
+
+                .price{
+                    position: absolute;
+                    left: 30px;
+                    bottom: 0px;
+                    font-size: 20px;
+                    font-weight: 300;
+                    color: $main-color;
+                }
+            }
+
+            .footer{
+                margin-top: 30px;
+
+                .rating{
+                    color:$main-color;
+                    font-size: 20px;
+                    letter-spacing: 3px;
+                    margin-top: 6px;
+                }
+
+                .btn-primary{
+                    @include buttom-style($main-color);
+                    color: $p-color;
+                    padding: 12px 44px;
+                    border-radius: 30px;
+                    font-size: 18px;
+                    font-weight: 600;
+
+                    &:hover{
+                        transform:translateY(-5px);
+                        transition: 0.3s ease-in;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.contact-location{
+    background-image: url(/src/images/footer-bg1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    .overlay{
+        background-color: rgba(21, 43, 90,0.9);
+    }
+
+    .contact{
+        h4{
+            color: $main-color;
+            font-size:25px ;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        ul{
+            list-style: none;
+            padding-right: 5px;
+
+            li{
+                margin-bottom: 35px;
+                font-size: 20px;
+                color: $p-color;
+
+                .custom-fa{
+                    color: $main-color;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+.footer{
+
+    background-color: $second-color;
+    .row-custom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .copy-right{
+            display: inline-block;
+            font-size: 20px;
+            color: $main-color;
+
+            span{
+                font-size: 20px;
+            }
+        }
+
+        .social-icons{
+            
+            ul{
+                list-style: none;
+                
+                li{
+                    display: inline-block;
+                    margin-right: 30px;
+                    font-size: 20px;
+
+                    &:hover{
+                        transform:translateY(-5px);
+                        transition: 0.7s;
+                    }
+                    
+                    a{
+                        color: $main-color;
+                    }
+                }
             }
         }
     }
