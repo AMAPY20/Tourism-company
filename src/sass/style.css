@@ -40,41 +40,56 @@ body {
   font-family: "cairo", "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" !important;
 }
 
-header {
+.top-menu {
   background-image: url(../images/piramide-jiza.jpg);
   background-position: fixed;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 100vh;
 }
-header .top-menu .navbar {
+.top-menu .navbar {
+  font-size: 18px;
   font-weight: bold;
   margin-top: 15px;
 }
-header .top-menu .navbar > a {
+.top-menu .navbar > a {
   font-family: "kufi";
-  font-size: 25px;
+  font-size: 30px;
   color: #152B5A;
 }
-header .top-menu .navbar .navbar-nav li > a {
+.top-menu .navbar .navbar-nav li > a {
   transition: all 0.4s ease;
 }
-header .top-menu .navbar .navbar-nav li > a:hover {
+.top-menu .navbar .navbar-nav li > a:hover {
   color: #ff9c34 !important;
 }
-header .top-menu .navbar .nav-link {
+.top-menu .navbar .nav-link {
   color: #152B5A !important;
   padding-right: 60px !important;
 }
-header .top-menu .navbar .navbar-collapse {
+.top-menu .navbar .navbar-collapse {
   justify-content: flex-end;
   margin-left: 50px;
 }
-header section .intr-txt p {
-  width: 550px;
-  margin: 50px auto 100px;
+.top-menu .navbar .search-icon {
   font-size: 20px;
-  font-weight: 400;
+  color: #152B5A;
+}
+.top-menu .navbar .search-icon:hover {
+  cursor: pointer;
+  color: #ff9c34;
+}
+.top-menu .txt {
+  align-items: center;
   color: #fefefe;
+  width: 500px;
+  margin: 60px auto 0;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 8px;
+}
+.top-menu .txt p {
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .our-service {
@@ -213,6 +228,10 @@ header section .intr-txt p {
 .contact-location .contact ul li .custom-fa {
   color: #ff9c34;
   margin-left: 20px;
+}
+.contact-location .map iframe {
+  width: 100%;
+  height: 220px;
 }
 
 .footer {
