@@ -28,6 +28,6 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@laylazi/bootstrap-rtl": "^4.6.0-1",
     "@laylazi/bootstrap-rtl-scss": "^4.6.0-1",
-    "sass": "^1.34.0"
+    "sass": "^1.32.13"
   }
 }

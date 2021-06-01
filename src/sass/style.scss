@@ -92,6 +92,63 @@ body{
     .btn-primary{
         margin: 10px 60px;
     }
+
+    .row-login{
+        align-items: center;
+        justify-content: center;
+        .card-login{
+
+            width: 100%;
+            margin-top: 30px;
+        }
+        
+        .login-title{
+            color: $second-color;
+            margin-bottom: 20px;
+        }
+
+        label{
+            color: $second-color;
+            font-size: 20px;
+            margin-bottom: 19px
+        }
+
+        .form-control-custom{
+            text-align: right;
+            color: $p-card-color;
+            height: calc(1.5em + 0.75rem + 9px);
+        }
+
+        .btn-primary{
+            @include buttom-style($main-color);
+            color: $p-color;
+            margin: 20px 0;
+            padding: 8px;
+            font-size: 19px;
+            font-weight: 400;
+            border-radius: 14px;
+            border-color: transparent;
+        }
+
+        .forgot-password-link{
+            font-size: 20px;
+            color: $p-card-color;
+            margin-bottom: 15px;
+        }
+
+        .login-footer-text{
+            font-size: 20px;
+            color: $second-color;
+
+            
+        }
+
+        .text-reset{
+                font-size: 15px;
+                color: $main-color;
+            }
+    }
+    
 }
 
 .our-service{
