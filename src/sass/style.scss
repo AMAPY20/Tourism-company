@@ -18,14 +18,16 @@ body{
     // overflow: hidden;
 }
 
-
-
-
 .top-menu{
-    background-image: url(../images/piramide-jiza.jpg);
-    // background-position: fixed;
+    background-image: url(../images/egypt-tour/image-2.jfif);
+    background-position: center center;
     background-size: cover;
-    min-height: 100vh;
+    background-repeat: no-repeat; 
+
+    .overlay{
+        background-color: $section-bg;
+        min-height: 100%;
+    }
 
     .navbar{
         font-size: 18px;
@@ -73,19 +75,34 @@ body{
         }
     }
 
-    .txt{
-        align-items: center;
-        color: $main-color;
-        width: 500px;
-        margin: 60px auto 0;
-        padding: 20px;
-        border: 1px solid ;
-        border-radius: 8px;
-        border-color: $second-color;
-        p{
-            font-size: 25px;
-            font-weight: 400;
-            text-shadow: 2px 2px ;
+    .jumbotron-custom{
+        
+        margin-bottom: 0;
+        padding-top: 115px;
+        padding-bottom: 40px;
+
+        h1{
+            color: $second-color;
+        }
+        .lead-custom{
+            color: $p-color;
+            line-height: 41px;
+            margin-top: 25px;
+        }
+
+        hr{
+            border-top: 1px solid rgb(255, 156, 52,0.7);
+        }
+        
+        .bank{
+            color: $p-card-color;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .btn-primary{
+            @include buttom-style($main-color);
+            color: $p-color;
         }
     }
 
@@ -156,6 +173,13 @@ body{
                 font-size: 15px;
                 color: $main-color;
             }
+    }
+
+    .carousel-inner-custom{
+        margin-top: 100px;
+        margin-right: 20px;
+
+        border-right: 3px solid $main-color;
     }
     
 }
@@ -381,5 +405,97 @@ body{
 .custom-breadcrumb{
     a{
         color: $second-color;
+    }
+}
+
+.gallery-area{
+
+    .single-gallery-item{
+        margin-bottom: 20px;
+        .img-holder{
+        img{
+            width: 100%;
+        }
+    }
+    }
+    
+}
+
+
+
+.tour-destination{
+
+    .destination-title{
+        margin-top: 40px;
+        border-bottom: 1px solid $p-color;
+        
+        h2{
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: $second-color;
+        }
+
+        .location{
+            color: $main-color;
+            margin: 0 20px 16px 0;
+            font-size: 20px;
+            
+            
+            span{
+                color: $p-card-color;
+                padding-right: 7px;
+                padding-left: 15px;
+                font-size: 20px;
+            }
+            .row-custom{
+                display: flex;
+                justify-content: flex-end;
+
+            }
+            .rating{
+                align-items: center;
+
+            }
+        }
+    }
+
+    .destination-details{
+        
+        border-bottom: 1px solid $p-color;
+        
+        .descrption{
+            margin: 20px 20px 16px 0;
+        }
+        .included{
+            @include included
+        }
+
+        p{
+            font-size: 19px;
+            line-height: 32px;
+            text-align: justify;
+            color: $p-card-color;
+        }
+    }
+
+    .activities{
+
+        margin: 20px 20px 16px 0;
+        .included{
+            @include included
+        }
+
+        .activities-list{
+            font-size: 18px;
+            li{
+                padding-bottom: 8px;
+                color: $p-card-color;
+                .check{
+                    color: $main-color;
+                    margin-left: 8px;
+                }
+            }
+        }
     }
 }

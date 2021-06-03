@@ -32,7 +32,7 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|jfif)$/i,
         use: [
           {
             loader: "file-loader",
@@ -84,7 +84,7 @@ module.exports = {
       template: "./src/login.html",
       filename: "login.html",
     }),
-    
+
     new HtmlWebpackPlugin({
       template: "./src/new-acount.html",
       filename: "new-acount.html",

@@ -14,3 +14,14 @@
     }
 }
 
+@mixin included {
+    font-size: 23px;
+    font-weight: bold;
+    li:first-child{
+        color: $main-color;
+    }
+    li:last-child{
+        color: $second-color;
+    }
+    
+}
