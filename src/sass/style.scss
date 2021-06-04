@@ -20,6 +20,7 @@ body{
 
 .top-menu{
     background-image: url(../images/egypt-tour/image-2.jfif);
+    
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat; 
@@ -132,11 +133,7 @@ body{
         .birthday{
             text-align: right;
             background-color: #ffff;
-            // color: $main-color;
-            // height: 38px;
-            // border-radius: 5px;
             padding: 7px;
-            // border: 1px solid $second-color;
         }
 
         .form-control-custom{
@@ -156,9 +153,17 @@ body{
             border-color: transparent;
         }
 
-        .forgot-password-link{
+        .forgot-password{
+            color: $main-color;
             font-size: 20px;
-            color: $p-card-color;
+            margin-bottom: 20px;
+            margin-right: 8px;
+        }
+
+        .forgot-password-link{
+            font-size: 17px;
+            font-weight: bold;
+            color: $second-color;
             margin-bottom: 15px;
         }
 
@@ -179,12 +184,39 @@ body{
         padding: 100px 0;
         height: 380px;
         color: $p-color;
-        .bg-information{
-            margin-right: auto;
-            margin-left: auto;
+        .bg-title{
+            margin: 0 350px;
+            background: radial-gradient(#B69983, transparent);
+            h3{
+            font-size: 32px;
+            }
         }
     }
     
+}
+.login-menu{
+
+    .overlay{
+        padding-bottom: 80px;
+    }
+}
+.menu-tour2{
+    background-image: url(../images/Istanbul-tour/image1.jpg);
+
+    .nav-information{
+        padding: 120px 0;
+        height: 380px;
+        color: $p-color;
+        font-size: 18px;
+        .bg-title{
+            margin: 0 350px;
+            background: radial-gradient($list-color, transparent);
+            h3{
+            font-size: 32px;
+            }
+        }
+        
+    }
 }
 
 .our-service{
@@ -237,84 +269,8 @@ body{
     
     margin-bottom: 20px;
     .card{
-        box-shadow: 0px 3px 15px 0px rgb(0 0 0 / 10%);
-        border-style: solid;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 10px 0 0 10px;
-        
-
-        .images{
-            width: 100%;
-            border-radius: 0 10px 10px 0 ;
-
-            &:hover{
-                cursor: pointer;
-                transition-duration: .3s;
-                transition-property: transform;
-                transition-timing-function: ease-out;
-            }
-        }
-
-        .card-body{
-            h5{
-                color: $second-color;
-                font-weight: 600;
-                font-size: 25px;
-                // margin-right: 20px;
-            }
-
-            .location{
-                color: $main-color;
-                
-            }
-
-            p{
-                color: $p-card-color;
-                font-size: 18px;
-                padding-top: 8px;
-            }
-
-            .header{
-                position: relative;
-
-                .price{
-                    position: absolute;
-                    left: 30px;
-                    bottom: 0px;
-                    font-size: 20px;
-                    font-weight: 300;
-                    color: $main-color;
-                }
-            }
-
-            .footer{
-                margin-top: 30px;
-
-                .rating{
-                    color:$main-color;
-                    font-size: 20px;
-                    letter-spacing: 3px;
-                    margin-top: 6px;
-                }
-
-                .btn-primary{
-                    @include buttom-style($main-color);
-                    color: $p-color;
-                    padding: 12px 44px;
-                    border-radius: 30px;
-                    font-size: 18px;
-                    font-weight: 600;
-                    transition: 0.3s ease-in;
-
-                    &:hover{
-                        transform:translateY(-5px);
-                        
-                    }
-                }
-            }
-        }
+        @include sightseeing-tours-card;
     }
-    
 }
 
 .contact-location{
@@ -456,7 +412,7 @@ body{
             margin: 20px 20px 16px 0;
         }
         .included{
-            @include included
+            @include included;
         }
 
         p{
@@ -464,6 +420,7 @@ body{
             line-height: 32px;
             text-align: justify;
             color: $p-card-color;
+            margin-right: 15px;
         }
     }
 
@@ -477,13 +434,36 @@ body{
         .activities-list{
             font-size: 18px;
             li{
-                padding-bottom: 8px;
                 color: $p-card-color;
-                .check{
+                margin-right: 10px;
+                font-size: 18px;
+            }
+            .check{
                     color: $main-color;
                     margin-left: 8px;
                 }
+            .list-custom{
+                li{
+                padding-bottom: 8px;
+                color: $list-color;
+                font-size: 20px;
+                font-weight: 600;
+                
+                
+                p{
+                    margin: 10px 30px 5px 0;
+                    text-align: justify;
+                    color: $p-card-color;
+                    line-height: 33px;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                
+
+                
             }
+            }
+            
         }
     }
 
@@ -509,7 +489,7 @@ body{
 
 .gallery-area{
         .content{
-            margin: 20px 55px;
+            margin: 20px 70px;
 
             .title{
                 color: $second-color;
@@ -552,4 +532,481 @@ body{
             }
         }
     }
+}
+
+.more-tours{
+    .content{
+        margin: 30px 90px;
+
+        .more-tours-title{
+            .included{
+                @include included;
+                .list-inline{
+                margin-right: 30px;
+                
+                }
+                border-bottom: 1px solid $p-color;
+                
+            }
+        }
+        .card{
+            @include sightseeing-tours-card;
+            margin: 0 100px 0 130px;
+            
+
+            
+        }
+    }
+}
+
+
+
+@media (min-width:360px){
+    .top-menu{
+
+        .jumbotron-custom{
+            padding-top: 50px;
+            h1{
+                font-size: 33px;
+                font-weight: bold;  
+            }
+
+            .lead{
+                font-size: 17px;
+                line-height: 35px;
+            }
+
+            .btn-primary{
+                margin-right: 0;
+            }
+        }
+        .bg-information{
+            .bg-title{
+                margin: 0 65px;
+            }
+        }
+
+        .custom-breadcrumb{
+            margin-top: 10px;
+
+            .breadcrumb-item.active {
+                color: $main-color;
+            }
+        }
+    }
+
+    .our-service{
+        .card-custom{
+            width: 300px;
+        }
+    }
+
+    .sightseeing-tours{
+        .card{
+                height: 100%;
+            // margin: 0 15px 10px 15px;
+            
+            .images{
+                border-radius: 10px 10px 0 0;
+            }
+            .card-body{
+                
+                // margin-bottom: 80px;
+                .header{
+                    .price{
+                        left: 7px;
+                        bottom: -9px;
+                        font-size: 25px;
+                    }
+                }
+                .footer{
+                    .rating{
+                        letter-spacing: normal;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .tour-destination{
+        .tours-location{
+            .map{
+            iframe{
+                height: 280px;
+            }
+        }
+        }
+    }
+
+    .gallery-area{
+        .content{
+            .single-gallery-item{
+                margin-bottom: 20px;
+                .img-holder{
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+            }
+        }
+    }
+    }
+
+    .more-tours{
+        .content{
+            margin: 30px 85px;
+            .card{
+                border-radius: 10px;
+                margin: 0px;
+
+                .footer{
+                    margin-bottom: 73px;
+                }
+
+                .images{
+                        border-radius: 10px 10px 0 0;
+                }
+            }
+        }
+    }
+
+    .footer{
+        .row-custom{
+            .copy-right{
+                font-size: 17px;
+                margin-right: 34px;
+            }
+
+            .social-icons{
+                margin-right: 40px;
+                ul{
+                    li{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width:544.5px){
+    .top-menu{
+        .jumbotron-custom{
+            padding-top: 75px;
+            h1{
+                font-size: 40px;
+                font-weight: bold;  
+            }
+
+            .lead{
+                font-size: 17px;
+                line-height: 35px;
+            }
+
+            .btn-primary{
+                margin-right: 0;
+            }
+        }
+        .bg-information{
+            .bg-title{
+                margin: 0 65px;
+            }
+        }
+
+        .custom-breadcrumb{
+            margin-top: 10px;
+
+            .breadcrumb-item.active {
+                color: $main-color;
+            }
+        }
+    }
+
+    .our-service{
+        .card-custom{
+            width: 300px;
+        }
+    }
+
+    .tour-destination{
+        .tours-location{
+            .map{
+            iframe{
+                height: 280px;
+            }
+        }
+        }
+    }
+
+    .gallery-area{
+        .content{
+            .single-gallery-item{
+                margin-bottom: 20px;
+                .img-holder{
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+            }
+        }
+    }
+    }
+
+    .more-tours{
+        .content{
+            margin: 30px 85px;
+            .card{
+                border-radius: 10px;
+                margin: 0px;
+
+                .footer{
+                    margin-bottom: 73px;
+                }
+
+                .images{
+                        border-radius: 10px 10px 0 0;
+                }
+            }
+        }
+    }
+
+    .footer{
+        .row-custom{
+            .copy-right{
+                font-size: 17px;
+            }
+
+            .social-icons{
+                ul{
+                    li{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:776px){
+    .top-menu{
+        .bg-information{
+            .bg-title{
+                margin: 0 65px;
+            }
+        }
+
+        .custom-breadcrumb{
+            margin-top: 10px;
+
+            .breadcrumb-item.active {
+                color: $main-color;
+            }
+        }
+    }
+
+    .tour-destination{
+        .destination-details{
+            p{
+                margin-right: 30px;
+            }
+            .descrption{
+                margin: 20px 13px 16px 0;
+            }
+        } 
+        .activities{
+            margin-right: 3px;
+        }
+        .tours-location{
+            margin-right: 0;
+            .map{
+            iframe{
+                height: 280px;
+            }
+        }
+        }
+    }
+
+    .gallery-area{
+        .content{
+            .single-gallery-item{
+                margin-bottom: 20px;
+                .img-holder{
+                    img{
+                        width: 100%;
+                        height: 200px;
+                    }
+            }
+        }
+    }
+    }
+
+    .more-tours{
+        .content{
+            margin: 30px 85px;
+            .card{
+                border-radius: 10px;
+                margin: 0;
+
+                .footer{
+                    margin-bottom: 73px;
+                }
+
+                .images{
+                        border-radius: 10px 10px 0 0;
+                }
+            }
+        }
+    }
+
+    .footer{
+            .row-custom{
+                .copy-right{
+                    font-size: 17px;
+                }
+
+                .social-icons{
+                    ul{
+                        li{
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+}
+
+@media (max-width:991.99px){
+    .top-menu{
+
+        .navbar{
+            
+            .nav-link{
+                padding-right: 25px !important;
+                // background: radial-gradient(#B69983, transparent);
+                
+            }
+
+            .search-icon{
+                margin-right: 31px;
+                padding-top: 10px;
+            }
+        }
+        .bg-information{
+            .bg-title{
+                margin: 0 120px;
+            }
+        }
+
+        .custom-breadcrumb{
+            margin-top: 10px;
+
+            .breadcrumb-item.active {
+                color: $main-color;
+            }
+        }
+    }
+
+    .our-service{
+        .card-custom{
+            width: 300px;
+        }
+    }
+
+    .sightseeing-tours{
+        .card{
+            
+            
+            .images{
+                border-radius: 10px 10px 0 0;
+            }
+            .card-body{
+                
+                margin-bottom: 80px;
+                
+            }
+        }
+    }
+
+    .tour-destination{
+        .destination-details{
+            p{
+                margin-right: 30px;
+            }
+            .descrption{
+                margin: 20px 13px 16px 0;
+            }
+        } 
+        .activities{
+            margin-right: 3px;
+            .activities-list{
+                .list-custom{
+                    li{
+                        p{
+                            margin: 10px 14px 5px 14px;
+                        }
+                    }
+                } 
+            }  
+        }
+        .tours-location{
+            margin-right: 0;
+            .map{
+            iframe{
+                height: 280px;
+            }
+        }
+        }
+    }
+
+    .gallery-area{
+        .content{
+            .single-gallery-item{
+                margin-bottom: 20px;
+                .img-holder{
+                    img{
+                        width: 100%;
+                        height: 250px;
+                    }
+            }
+        }
+    }
+    }
+
+    .more-tours{
+        .content{
+            margin: 30px 55px;
+            .card{
+                border-radius: 10px;
+                margin: 0;
+
+                .footer{
+                    margin-bottom: 73px;
+                }
+
+                .images{
+                        border-radius: 10px 10px 0 0;
+                }
+            }
+        }
+    }
+
+    .footer{
+            .row-custom{
+                .copy-right{
+                    font-size: 17px;
+                }
+
+                .social-icons{
+                    ul{
+                        li{
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+
 }

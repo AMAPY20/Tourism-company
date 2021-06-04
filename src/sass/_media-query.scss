@@ -1,3 +1,5 @@
+@import './colors-home-page';
+
 @media(max-width:991px){
     .top-menu{
         .navbar{
@@ -9,7 +11,79 @@
         }
     }
 }
+@media (max-width:756px){
+    .top-menu{
+        .bg-information{
+            .bg-title{
+                margin: 0 65px;
+            }
+        }
 
+        .custom-breadcrumb{
+            margin-top: 10px;
+
+            .breadcrumb-item.active {
+                color: $main-color;
+            }
+        }
+    }
+
+    .tour-destination{
+        .tours-location{
+            .map{
+            iframe{
+                height: 280px;
+            }
+        }
+        }
+    }
+
+    .gallery-area{
+        .content{
+            .single-gallery-item{
+                margin-bottom: 20px;
+                .img-holder{
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+            }
+        }
+    }
+
+    .more-tours{
+        .content{
+            margin: 30px 40px;
+            .card{
+                border-radius: 10px;
+                margin: 0 65px 0 65px;
+
+                .images{
+                        border-radius: 10px 10px 0 0;
+                }
+            }
+        }
+    }
+
+    .footer{
+        .row-custom{
+            .copy-right{
+                font-size: 17px;
+            }
+
+            .social-icons{
+                ul{
+                    li{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+}
 @media (max-width:545px){
     .top-menu{
 
@@ -19,5 +93,4 @@
         }
     }
     
-
 }

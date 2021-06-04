@@ -95,6 +95,11 @@ module.exports = {
       filename: "tours.html",
     }),
 
+    new HtmlWebpackPlugin({
+      template: "./src/tours2.html",
+      filename: "tours2.html",
+    }),
+
     new MiniCssExtractPlugin(),
   ],
 };
