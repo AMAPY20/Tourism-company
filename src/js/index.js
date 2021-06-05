@@ -1,23 +1,26 @@
-import '@laylazi/bootstrap-rtl/dist/js/bootstrap.min.js';
 // import '@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.min.css';
 import "@laylazi/bootstrap-rtl-scss/scss/bootstrap-rtl.scss";
 import 'jquery/dist/jquery.min';
 import 'popper.js/dist/popper.min';
+// import "@laylazi/bootstrap-rtl/dist/js/bootstrap";
+// import 'bootstrap/js/dist/bootstap';
+import '@laylazi/bootstrap-rtl/dist/js/bootstrap'
 import "@fortawesome/fontawesome-free/js/all";
 import "../sass/style.scss";
 import "animate.css";
 
-// تحرك الصفحة بين عناصر القائمة ضمن فترة زمنية محددة
-// $(document).ready(function(){
-//     $("a.scroll").on('click', function(event) {
 
-//             var hash = this.hash;
+// new WOW().init();
 
-//             $('html, body').animate({scrollTop: $(hash).offset().top - 100}, 800)
-        
-//     });
-// });
+$(document).ready(function () {
+    $("scroll").on('click', function (event) {
 
+        var hash = this.hash;
+
+        $('html, body').animate({ scrollTop: $(hash).offset().top - 90 }, 800, function () { });
+    
+    });
+});
 
 // التأكد من أن كلمة المرور هي نفسها في الحقلين
 
@@ -39,10 +42,11 @@ password.onchange = validatePassword;
 // تطبيق الشيفرة عند الضغط على مفتاح لوحة المفاتيح
 confirm_password.onkeyup = validatePassword;
 
-$(document).ready(function() {
-    $(".searchbtn").click(function() {
-        $(this).toggleClass("bg-green");
-        $(".fass").toggleClass("color-white");
-        $('.input').toggleClass("active-white");
+let search = document.getElementsByClassName(".search"),
+    searchicon = document.getElementsByClassName(".fasearch");
+        
+$(document).on("ready", function () {
+    $("#icon").on("click", function () {
+        $(".search-icon").toggleClass("active");
     });
 });

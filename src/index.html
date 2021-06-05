@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سفرني</title>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="120">
-
-
+<body data-spy="scroll" data-target=".navbar" data-offset="100">
+    <!-- قسم القائمة العلوية -->
     <section class="top-menu">
         <div class="overlay">
             <div class="container">
                 <div class="row">
+                    <!-- القائمة العلوية -->
                     <nav class="navbar navbar-expand-lg navbar-light bg-transparent w-100">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,28 +39,33 @@
                             </ul>
                             
                         </div>
+                        <!-- اضافة ايقونة البحث -->
                         <div class="search-icon">
-                            <i class="fas fa-search-location"></i>
+                            <div id="icon">
+                                <i class="fas fa-search-location fasearch"></i>
+                            </div>
+                            <input type="text" class="search">
                         </div>
                         
                     </nav>
                 </div>
-
+                <!-- القسم التعريفي بالشركة -->
                 <div class="jumbotron jumbotron-custom bg-transparent">
                     <h1 class="display-4 animate__animated  animate__backInRight">أهلا بكم في سفرني</h1>
                     <p class="lead lead-custom">الشركة السياحية الأفضل في الوطن العربي، هدفنا مساعدتك وتيسير أمورك، لا تتردد بالتواصل معنا فنحن هنا لنساعدك على إيجاد كل
                     ما تحتاج له. إن كنت تبحث عن سكن أو جولة سياحية لتقضي أفضل الأوقات فقد وجدت طلبك.</p>
-                    <hr class="my-4">
+                    <hr class="my-md-4">
                     <p class="bank">سجل حسابك الآن وادفع عبر البنك بحماية عالية</p>
                     <a class="btn btn-primary btn-lg" href="login.html" role="button">تسجيل الدخول</a>
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- قسم خدماتنا -->
     <section class=" our-service" id="services">
         <div class="overlay">
             <div class="container">
+                <!-- عنوان القسم -->
                 <div class="col-md-12">
                     <div class="title text-center">
                         <h2>
@@ -68,9 +73,11 @@
                         </h2>
                     </div>
                 </div>
+                <!-- بطاقات الخدمات -->
                 <div class="row">
+                    <!-- البطاقة الأولى -->
                     <div class="col-sm-6 mb-4">
-                        <div class="card card-custom text-center animate__animated animate__fadeInDown">
+                        <div class="card card-custom text-center">
                             <i class="fas fa-home icons"></i>
                             <div class="card-body">
                                 <h5 class="card-title">حجزالسكن</h5>
@@ -79,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                
+                    <!-- البطاقة الثانية -->
                     <div class="col-sm-6 mb-4">
                         <div class="card card-custom text-center">
                             <i class="fas fa-car icons"></i>
@@ -90,7 +97,7 @@
                             </div>
                         </div>
                     </div>
-                
+                    <!-- البطاقة الثالثة -->
                     <div class="col-sm-6 mb-4">
                         <div class="card card-custom text-center">
                             <i class="fas fa-bus icons"></i>
@@ -100,11 +107,10 @@
                                     المرشدين
                                     السياحيين الذين يُجيدون اللغة
                                     العربية ولإنجليزية.</p>
-                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                             </div>
                         </div>
                     </div>
-                
+                    <!-- البطاقة الرابعة -->
                     <div class="col-sm-6 mb-4">
                         <div class="card card-custom text-center">
                             <i class="fas fa-plane-arrival icons"></i>
@@ -114,7 +120,6 @@
                                     دائمًا في
                                     خدمتكم أثناء وصولكم أو ذهابكم
                                     للمطار مع أفضل وسائل النقل.</p>
-                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                             </div>
                         </div>
                     </div>
@@ -122,8 +127,8 @@
             </div>
         </div>
     </section>
-
-    <section class="sightseeing-tours">
+    <!-- قسم الجولات السياحية -->
+    <section class="sightseeing-tours ">
         <div class="container">
             <div class="col-md-12">
                 <div class="title text-center">
@@ -132,16 +137,17 @@
                     </h2>
                 </div>
             </div>
-            
+            <!-- بطاقات الجولات -->
             <div class="row">
-                <div class="col-md-6">
+                <!-- البطاقة الاولى -->
+                <div class="col-sm-6 col-lg-12">
                     <div class="card my-3">
                         <div class="row no-gutters">
                             <div class="col-lg-4">
                                 <img class="images" src="images/sightseeing-tours/Round-2.jpg" alt="...">
                             </div>
                             <div class="col-lg-8">
-                                <div class="card-body mr-lg-3 h-100">
+                                <div class="card-body h-lg-100">
                                     <div class="header">
                                         <h5 class="card-title"> الأهرامات في مصر</h5>
                                         <div class="price ">799$</div>
@@ -162,22 +168,20 @@
                                         </div>
                                         <a href="tours.html" class=" btn btn-primary float-left"> احجز الآن</a>
                                     </div>
-                    
-                                    <!-- <div class="price">450$</div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-md-6">
+                <!-- البطاقة الثانية -->
+                <div class="col-sm-6 col-lg-12">
                     <div class="card my-3">
                         <div class="row no-gutters">
                             <div class="col-lg-4">
                                 <img class="images" src="images/sightseeing-tours/Round-1.jpg" alt="...">
                             </div>
                             <div class="col-lg-8">
-                                <div class="card-body mr-lg-3 h-100">
+                                <div class="card-body h-lg-100">
                                     <div class="header">
                                         <h5 class="card-title"> مدينة إسطنبول</h5>
                                         <div class="price ">499$</div>
@@ -198,8 +202,6 @@
                                         </div>
                                         <a href="#" class=" btn btn-primary float-left "> احجز الآن</a>
                                     </div>
-                    
-                                    <!-- <div class="price">450$</div> -->
                                 </div>
                             </div>
                         </div>
@@ -209,11 +211,12 @@
             </div>
         </div>
     </section>
-
+    <!-- قسم تواصل معنا -->
     <section class="contact-location" id="contact-us">
         <div class="overlay">
             <div class="container">
                 <div class="row pt-5">
+                    <!-- اضافة معلومات الاتصال -->
                     <div class="col-md-6">
                         <div class="contact">
                             <h4>معلومات الاتصال</h4>
@@ -233,6 +236,7 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- اضافة خريطة لموقع الشركة -->
                     <div class="col-md-6">
                         <div class="map">
                             <iframe
@@ -244,14 +248,15 @@
             </div>
         </div>
     </section>
-
+    <!-- قسم تذييل الصفحة -->
     <footer class="footer">
         <div class="container">
+            <!-- حقوق النشر -->
             <div class="row-custom pt-4">
                 <p class="copy-right">
                     © جميع الحقوق محفوظة لسنة 2021
                 </p>
-                
+                <!-- أيقونات التواصل الاجتماعي -->
                 <div class="social-icons">
                     <ul>
                         <li>
@@ -268,6 +273,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>

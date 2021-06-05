@@ -39,6 +39,7 @@ module.exports = {
             options: {
               name: "[name].[ext]",
               outputpath: "images",
+              // publicPath: "assets",
             },
           },
         ],
@@ -61,6 +62,14 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
+      },
+
+      {
+        test: require.resolve("jquery"),
+        loader: "expose-loader",
+        options: {
+          exposes: ["$", "jQuery"],
+        },
       },
     ],
   },

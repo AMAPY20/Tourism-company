@@ -4,6 +4,7 @@
 @import './mixins';
 @import './custom';
 
+// اضافة انواع الخطوط المستخدمة
 @font-face{
     font-family: "cairo";
     src: url(../fonts/Cairo-Regular.ttf);
@@ -17,19 +18,19 @@ body{
     font-family: "cairo", "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" !important;
     // overflow: hidden;
 }
-
+// تنسيقات القائمة العلوية
 .top-menu{
     background-image: url(../images/egypt-tour/image-2.jfif);
     
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat; 
-
+    // الطبقة الشفافة فوق الصورة
     .overlay{
         background-color: $section-bg;
         min-height: 100%;
     }
-
+    // تنسيق القائمة 
     .navbar{
         font-size: 18px;
         font-weight: bold;
@@ -75,7 +76,16 @@ body{
 
         }
     }
-
+    // تعديل ألوان مسار الصفحلات
+    .custom-breadcrumb{
+        li{
+            color: $main-color;
+            a{
+                color: $second-color;
+            }
+        }
+    }
+    // تعديل على قسم التعريف بالشركة
     .jumbotron-custom{
         
         margin-bottom: 0;
@@ -104,6 +114,7 @@ body{
         .btn-primary{
             @include buttom-style($main-color);
             color: $p-color;
+            margin-right: 0;
         }
     }
 
@@ -194,15 +205,17 @@ body{
     }
     
 }
+// تنسيقات اضافية لصفحة  تسجيل الدخول
 .login-menu{
 
     .overlay{
         padding-bottom: 80px;
     }
 }
+// تغيير الصورة في صفحة الرحبة الى تركيا
 .menu-tour2{
     background-image: url(../images/Istanbul-tour/image1.jpg);
-
+    // تعديل على معلومات الصورة
     .nav-information{
         padding: 120px 0;
         height: 380px;
@@ -218,7 +231,7 @@ body{
         
     }
 }
-
+// تنسيق قسم خدماتنا
 .our-service{
 
     background-image: url(/src/images/Background-our-servicepng.png);
@@ -235,12 +248,17 @@ body{
     .card-custom{
         box-shadow: 0px 3px 15px 0px rgb(0 0 0 / 10%);
         border-style: solid;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 10px 10px 10px 10px;
+        border-width: 0px ;
+        border-radius: 10px;
         margin: 0 auto;
         width: 350px;
         height: 300px;
+        transition: 0.3s;
 
+        &:hover{
+            cursor: pointer;
+            transform: translateY(-5px);
+        }
         .icons{
             color: $main-color;
             font-size: 49px;
@@ -264,15 +282,20 @@ body{
         }
     }
 }
-
+// تنسيقات قسم بطاطات الجولات
 .sightseeing-tours{
     
     margin-bottom: 20px;
     .card{
         @include sightseeing-tours-card;
+        transition: 0.3s;
+        &:hover{
+            transform: translateX(5px);
+        }
     }
 }
 
+// تنسيقات قسم تواصل معنا
 .contact-location{
     background-image: url(/src/images/footer-bg1.png);
     background-position: center;
@@ -317,6 +340,7 @@ body{
     }
 }
 
+// تنسيقا تذييل الصفحة
 .footer{
 
     background-color: $second-color;
@@ -346,10 +370,11 @@ body{
                     display: inline-block;
                     margin-right: 30px;
                     font-size: 20px;
+                    transition: 0.7s;
 
                     &:hover{
                         transform:translateY(-5px);
-                        transition: 0.7s;
+                        
                     }
                     
                     a{
@@ -360,13 +385,7 @@ body{
         }
     }
 }
-
-.custom-breadcrumb{
-    a{
-        color: $second-color;
-    }
-}
-
+// تنسيق قسم معلومات الرحلة
 .tour-destination{
     
     .destination-title{
@@ -486,7 +505,6 @@ body{
 }
 
 // تنسيقات معرض الصور
-
 .gallery-area{
         .content{
             margin: 20px 70px;
@@ -533,11 +551,10 @@ body{
         }
     }
 }
-
+// تنسيق قسم الرحلات الاخرى
 .more-tours{
     .content{
-        margin: 30px 90px;
-
+        
         .more-tours-title{
             .included{
                 @include included;
@@ -551,7 +568,13 @@ body{
         }
         .card{
             @include sightseeing-tours-card;
-            margin: 0 100px 0 130px;
+            // margin: 0 100px 0 130px;
+            transition: 0.3s;
+
+            &:hover{
+                transform:translateX(-5px);
+                cursor: pointer;
+            }
             
 
             
@@ -559,21 +582,24 @@ body{
     }
 }
 
+// تنسيقات تجاوب الصفحات
 
-
-@media (min-width:360px){
+@media (max-width:546px){
     .top-menu{
-
         .jumbotron-custom{
-            padding-top: 50px;
+            padding-top: 75px;
             h1{
-                font-size: 33px;
+                font-size: 35px;
                 font-weight: bold;  
             }
 
             .lead{
                 font-size: 17px;
                 line-height: 35px;
+            }
+
+            .bank{
+                font-size: 16px;
             }
 
             .btn-primary{
@@ -598,47 +624,58 @@ body{
     .our-service{
         .card-custom{
             width: 300px;
+        }
+    }
+
+    .tour-destination{
+        .destination-title{
+            .location{
+                margin-right: 0;
+            }
+        }
+        .activities{
+            .included{
+                font-size: 18px;
+            }
+            .activities-list{
+                li{
+                    margin: 0 12px 0 12px;
+                    font-size: 17px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        .tours-location{
+            .map{
+            iframe{
+                height: 280px;
+            }
+        }
         }
     }
 
     .sightseeing-tours{
         .card{
-                height: 100%;
-            // margin: 0 15px 10px 15px;
-            
             .images{
                 border-radius: 10px 10px 0 0;
             }
             .card-body{
-                
-                // margin-bottom: 80px;
-                .header{
-                    .price{
-                        left: 7px;
-                        bottom: -9px;
-                        font-size: 25px;
-                    }
-                }
+
                 .footer{
                     .rating{
+                        font-size: 19px;
                         letter-spacing: normal;
                     }
+                    .btn-primary{
+                        // margin-left: 10px;
+                    }
+                    
                 }
                 
             }
         }
     }
 
-    .tour-destination{
-        .tours-location{
-            .map{
-            iframe{
-                height: 280px;
-            }
-        }
-        }
-    }
-
     .gallery-area{
         .content{
             .single-gallery-item{
@@ -646,7 +683,7 @@ body{
                 .img-holder{
                     img{
                         width: 100%;
-                        height: 100%;
+                        height: auto;
                     }
             }
         }
@@ -655,133 +692,52 @@ body{
 
     .more-tours{
         .content{
-            margin: 30px 85px;
+            
             .card{
                 border-radius: 10px;
                 margin: 0px;
 
-                .footer{
-                    margin-bottom: 73px;
-                }
-
                 .images{
                         border-radius: 10px 10px 0 0;
                 }
+
+                .card-body{
+                    .header{
+                        .price{
+                            left: 0px;
+                            bottom: -3px;
+                        }
+                    }
+                    .footer{
+                        margin-top: 0;
+                        .rating{
+                            font-size: 19px;
+                            letter-spacing: normal;
+                            margin-top: 12px;
+                        }
+                        .btn-primary{
+                            padding: 12px 25px;
+                        }
+                    }
+                }                
             }
         }
     }
 
     .footer{
         .row-custom{
-            .copy-right{
-                font-size: 17px;
-                margin-right: 34px;
-            }
-
-            .social-icons{
-                margin-right: 40px;
-                ul{
-                    li{
-                        font-size: 17px;
-                    }
-                }
-            }
-        }
-    }
-
-}
-
-@media (min-width:544.5px){
-    .top-menu{
-        .jumbotron-custom{
-            padding-top: 75px;
-            h1{
-                font-size: 40px;
-                font-weight: bold;  
-            }
-
-            .lead{
-                font-size: 17px;
-                line-height: 35px;
-            }
-
-            .btn-primary{
-                margin-right: 0;
-            }
-        }
-        .bg-information{
-            .bg-title{
-                margin: 0 65px;
-            }
-        }
-
-        .custom-breadcrumb{
-            margin-top: 10px;
-
-            .breadcrumb-item.active {
-                color: $main-color;
-            }
-        }
-    }
-
-    .our-service{
-        .card-custom{
-            width: 300px;
-        }
-    }
-
-    .tour-destination{
-        .tours-location{
-            .map{
-            iframe{
-                height: 280px;
-            }
-        }
-        }
-    }
-
-    .gallery-area{
-        .content{
-            .single-gallery-item{
-                margin-bottom: 20px;
-                .img-holder{
-                    img{
-                        width: 100%;
-                        height: 100%;
-                    }
-            }
-        }
-    }
-    }
-
-    .more-tours{
-        .content{
-            margin: 30px 85px;
-            .card{
-                border-radius: 10px;
-                margin: 0px;
-
-                .footer{
-                    margin-bottom: 73px;
-                }
-
-                .images{
-                        border-radius: 10px 10px 0 0;
-                }
-            }
-        }
-    }
-
-    .footer{
-        .row-custom{
+            flex-direction: column;
             .copy-right{
                 font-size: 17px;
             }
 
             .social-icons{
+                
+                margin-left: 20px;
                 ul{
+                    padding-right: 0;
                     li{
-                        font-size: 17px;
+                        margin-right: 17px;
                     }
                 }
             }
@@ -829,8 +785,29 @@ body{
         }
     }
 
+    .sightseeing-tours{
+        .card{
+            .images{
+                border-radius: 10px 10px 0 0;
+            }
+            .card-body{
+
+                .footer{
+                    .rating{
+                        letter-spacing: normal;
+                        .btn-primary{
+                            padding: 12px 35px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
     .gallery-area{
         .content{
+            margin: 20px 30px;
             .single-gallery-item{
                 margin-bottom: 20px;
                 .img-holder{
@@ -845,7 +822,6 @@ body{
 
     .more-tours{
         .content{
-            margin: 30px 85px;
             .card{
                 border-radius: 10px;
                 margin: 0;
@@ -865,14 +841,6 @@ body{
             .row-custom{
                 .copy-right{
                     font-size: 17px;
-                }
-
-                .social-icons{
-                    ul{
-                        li{
-                            font-size: 17px;
-                        }
-                    }
                 }
             }
         }
@@ -896,7 +864,7 @@ body{
         }
         .bg-information{
             .bg-title{
-                margin: 0 120px;
+                margin: 0 40px;
             }
         }
 
@@ -917,15 +885,22 @@ body{
 
     .sightseeing-tours{
         .card{
-            
-            
             .images{
                 border-radius: 10px 10px 0 0;
             }
             .card-body{
                 
-                margin-bottom: 80px;
+                margin-bottom: 60px;
                 
+                p{
+                    font-size: 16px;
+                }
+
+                .footer{
+                    .rating{
+                        letter-spacing: normal;
+                    }
+                }
             }
         }
     }
@@ -933,7 +908,7 @@ body{
     .tour-destination{
         .destination-details{
             p{
-                margin-right: 30px;
+                margin: 0 10px 0 20px;
             }
             .descrption{
                 margin: 20px 13px 16px 0;
@@ -966,9 +941,10 @@ body{
             .single-gallery-item{
                 margin-bottom: 20px;
                 .img-holder{
+                    
                     img{
                         width: 100%;
-                        height: 250px;
+                        height: auto;
                     }
             }
         }
@@ -977,7 +953,7 @@ body{
 
     .more-tours{
         .content{
-            margin: 30px 55px;
+            
             .card{
                 border-radius: 10px;
                 margin: 0;
