@@ -2,15 +2,11 @@
 import "@laylazi/bootstrap-rtl-scss/scss/bootstrap-rtl.scss";
 import 'jquery/dist/jquery.min';
 import 'popper.js/dist/popper.min';
-// import "@laylazi/bootstrap-rtl/dist/js/bootstrap";
 // import 'bootstrap/js/dist/bootstap';
 import '@laylazi/bootstrap-rtl/dist/js/bootstrap'
-import "@fortawesome/fontawesome-free/js/all";
+import '@fortawesome/fontawesome-free/js/all';
 import "../sass/style.scss";
 import "animate.css";
-
-
-// new WOW().init();
 
 $(document).ready(function () {
     $("scroll").on('click', function (event) {

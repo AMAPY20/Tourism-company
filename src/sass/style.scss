@@ -180,15 +180,9 @@ body{
 
         .login-footer-text{
             font-size: 20px;
-            color: $second-color;
-
-            
+            color: $second-color; 
         }
 
-        .text-reset{
-                font-size: 15px;
-                color: $main-color;
-            }
     }
 
     .nav-information{
@@ -860,6 +854,10 @@ body{
             .search-icon{
                 margin-right: 31px;
                 padding-top: 10px;
+
+                .active{
+                    width: 80px;
+                }
             }
         }
         .bg-information{
