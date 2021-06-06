@@ -4,7 +4,7 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, "./src/js/index.js"),
+    main: path.resolve(__dirname, "./src/index.js"),
   },
   output: {
     publicPath: "/",
@@ -32,12 +32,12 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpe?g|gif|jfif)$/i,
+        test: /\.(png|jpe?g|gif|jfif)$/,
         use: [
           {
             loader: "file-loader",
             options: {
-              name: "[name].[ext]",
+              name: "./images/[name].[ext]",
               outputpath: "images",
               // publicPath: "assets",
             },
@@ -60,16 +60,16 @@ module.exports = {
       },
 
       {
-        test: /\.html$/i,
-        loader: "html-loader",
-      },
-
-      {
         test: require.resolve("jquery"),
         loader: "expose-loader",
         options: {
           exposes: ["$", "jQuery"],
         },
+      },
+
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
       },
 
       // {
@@ -125,5 +125,10 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin(),
+
+    // new webpack.ProvidePlugin({
+    //   $: "jquery",
+    //   jQuery: "jquery",
+    // }),
   ],
 };

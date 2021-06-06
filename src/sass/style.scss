@@ -1,4 +1,3 @@
-@import './media-query';
 @import './colors-home-page';
 @import './titles-sections';
 @import './mixins';
@@ -65,18 +64,9 @@ body{
             margin-left: 50px;
         }
 
-        .search-icon{
-            font-size: 20px;
-            color: $second-color;
-
-            &:hover{
-                cursor: pointer;
-                color: $main-color;
-            }
-
-        }
+        
     }
-    // تعديل ألوان مسار الصفحلات
+    // تعديل ألوان مسار الصفحات
     .custom-breadcrumb{
         li{
             color: $main-color;
@@ -115,6 +105,58 @@ body{
             @include buttom-style($main-color);
             color: $p-color;
             margin-right: 0;
+        }
+
+        .location-search{
+            span{
+                font-size: 23px;
+                font-weight: bold;
+                color: $second-color;
+                margin-right: 15px;
+                margin-left: 10px;
+                
+            }
+        }
+
+        #icon{
+            font-size: 20px;
+            color: $second-color;
+            margin-left: 5px;
+            background: $main-color;
+            padding: 4px 10px;
+            border: 1px solid $main-color;
+            border-radius: 9px;
+            box-shadow: 0 5px 20px;
+            &:hover{
+            cursor: pointer;
+            }
+        }
+
+        .search-icon{
+            width: 0px;
+            height: 39px;
+            background-color: $main-color;
+            box-shadow: 0 5px 20px $second-color;
+            border-radius: 9px;
+            transition: width 0.5s;
+            overflow: hidden;
+            position:relative;
+            
+            &.active{
+                width: 300px;
+            }
+
+            .search{
+                position:absolute;
+                top: 2px;
+                left: 6px;
+                width: calc(100% - 10px);
+                height: 33px;
+                border: none;
+                outline: none;
+                background-color: $main-color;
+                color: $second-color;
+            }
         }
     }
 
@@ -599,6 +641,13 @@ body{
             .btn-primary{
                 margin-right: 0;
             }
+
+            .search-icon{
+            
+                &.active{
+                    width: 100px;
+                }
+            }
         }
         .bg-information{
             .bg-title{
@@ -854,10 +903,6 @@ body{
             .search-icon{
                 margin-right: 31px;
                 padding-top: 10px;
-
-                .active{
-                    width: 80px;
-                }
             }
         }
         .bg-information{
