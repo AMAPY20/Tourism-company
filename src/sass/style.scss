@@ -323,7 +323,7 @@ body{
     
     margin-bottom: 20px;
     .card{
-        @include sightseeing-tours-card;
+        @include sightseeing-tours-card-home;
         transition: 0.3s;
         &:hover{
             transform: translateX(5px);
@@ -897,12 +897,7 @@ body{
                         font-size: 19px;
                         letter-spacing: normal;
                     }
-                    .btn-primary{
-                        // margin-left: 10px;
-                    }
-                    
                 }
-                
             }
         }
     }
