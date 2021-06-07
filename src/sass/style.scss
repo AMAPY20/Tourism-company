@@ -432,17 +432,17 @@ body{
             font-size: 40px;
             margin-bottom: 20px;
             font-weight: bold;
-            color: $second-color;
+            @include tour-page-color ($tour1-main-color);
         }
 
         .location{
-            color: $main-color;
+            @include tour-page-color ($tour1-second-color);
             margin: 0 20px 16px 0;
             font-size: 20px;
             
             
             span{
-                color: $p-card-color;
+                @include tour-page-color ($tour1-main-color);
                 padding-right: 7px;
                 padding-left: 15px;
                 font-size: 20px;
@@ -489,12 +489,12 @@ body{
         .activities-list{
             font-size: 18px;
             li{
-                color: $p-card-color;
+                @include tour-page-color ($tour1-fourth-color);
                 margin-right: 10px;
                 font-size: 18px;
             }
             .check{
-                    color: $main-color;
+                    @include tour-page-color ($tour1-main-color);
                     margin-left: 8px;
                 }
             .list-custom{
@@ -508,7 +508,7 @@ body{
                 p{
                     margin: 10px 30px 5px 0;
                     text-align: justify;
-                    color: $p-card-color;
+                    @include tour-page-color ($tour1-fourth-color);
                     line-height: 33px;
                     font-size: 18px;
                     font-weight: 500;
@@ -540,17 +540,183 @@ body{
     }
 }
 
+.tour-destination-2{
+    
+    .destination-title-2{
+        margin-top: 40px;
+        border-bottom: 1px solid $p-color;
+        
+        h2{
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            @include tour-page-color ($tour2-main-color);
+        }
+
+        .location{
+            @include tour-page-color ($tour2-second-color);
+            margin: 0 20px 16px 0;
+            font-size: 20px;
+            
+            
+            span{
+                @include tour-page-color ($tour2-main-color);
+                padding-right: 7px;
+                padding-left: 15px;
+                font-size: 20px;
+            }
+            .row-custom{
+                display: flex;
+                justify-content: flex-end;
+
+            }
+            .rating{
+                align-items: center;
+                @include tour-page-color ($tour2-second-color);
+            }
+        }
+    }
+
+    .destination-details{
+        
+        border-bottom: 1px solid $p-color;
+        
+        .descrption{
+            margin: 20px 20px 16px 0;
+        }
+        .included{
+            @include included2;
+        }
+
+        p{
+            font-size: 19px;
+            line-height: 32px;
+            text-align: justify;
+            color: $p-card-color;
+            margin-right: 15px;
+        }
+    }
+
+    .activities{
+        border-bottom: 1px solid $p-color;
+        margin: 20px 20px 16px 0;
+        .included2{
+            @include included2
+        }
+
+        .activities-list{
+            font-size: 18px;
+            li{
+                @include tour-page-color ($tour2-fourth-color);
+                margin-right: 10px;
+                font-size: 18px;
+            }
+            .check{
+                    @include tour-page-color ($tour2-main-color);
+                    margin-left: 8px;
+                }
+            .list-custom{
+                li{
+                padding-bottom: 8px;
+                font-size: 20px;
+                font-weight: 600;
+                @include tour-page-color ($tour2-second-color);
+                
+                
+                p{
+                    margin: 10px 30px 5px 0;
+                    text-align: justify;
+                    @include tour-page-color ($tour2-fourth-color);
+                    line-height: 33px;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                
+
+                
+            }
+            }
+            
+        }
+    }
+
+    .tours-location{
+        margin-right: 20px;
+        border-bottom: 1px solid $p-color;
+        .included2{
+            @include included2;
+        }
+
+        .map{
+            margin-bottom: 1rem;
+            iframe{
+                width: 100%;
+                height: 450px;
+                border: 0;
+            }
+        }
+    }
+}
+
+
 // تنسيقات معرض الصور
 .gallery-area{
         .content{
             margin: 20px 70px;
 
             .title{
-                color: $second-color;
+                @include tour-page-color ($tour1-second-color);
                 font-size: 28px;
                 font-weight: 500;
                 .mini-title {
-                    color: $main-color;
+                    @include tour-page-color ($tour1-main-color);
+                    margin-bottom: 8px;
+                    h4{
+                        font-size: 19px;
+                    }
+                }
+
+                .large-title{
+                    font-weight: bold;
+                    h3{
+                        font-size: 35px;
+                    }
+                }
+            }
+
+            .single-gallery-item{
+                margin-bottom: 20px;
+                .img-holder{
+                    transition: 0.3s ease-in;
+                    box-shadow: 0px 3px 15px 0px rgb(0 0 0 / 10%);
+                    border-style: solid;
+                    border-width: 0px 0px 0px 0px;
+                    border-radius: 10px 10px 10px 10px;
+                    img{
+                        width: 100%;
+                        height: 215px;
+                    }
+
+                    &:hover{
+                        cursor: pointer;
+                        transform:translateY(-7px);
+                        
+                    }
+            }
+        }
+    }
+}
+
+.gallery-area-2{
+        .content{
+            margin: 20px 70px;
+
+            .title{
+                @include tour-page-color ($tour2-second-color);
+                font-size: 28px;
+                font-weight: 500;
+                .mini-title {
+                    @include tour-page-color ($tour2-main-color);
                     margin-bottom: 8px;
                     h4{
                         font-size: 19px;
@@ -604,7 +770,6 @@ body{
         }
         .card{
             @include sightseeing-tours-card;
-            // margin: 0 100px 0 130px;
             transition: 0.3s;
 
             &:hover{
@@ -613,6 +778,34 @@ body{
             }
             
 
+            
+        }
+    }
+}
+
+.more-tours-2{
+    .content-2{
+        
+        .more-tours-title{
+            .included2{
+                @include included2;
+                .list-inline{
+                margin-right: 30px;
+                
+                }
+                border-bottom: 1px solid $p-color;
+                
+            }
+        }
+        .card{
+            transition: 0.3s;
+            @include sightseeing-tours-2-card;
+            
+            &:hover{
+                transform:translateX(-5px);
+                cursor: pointer;
+            }
+            
             
         }
     }
@@ -645,7 +838,7 @@ body{
             .search-icon{
             
                 &.active{
-                    width: 100px;
+                    width: 100px !important;
                 }
             }
         }
@@ -664,11 +857,6 @@ body{
         }
     }
 
-    .our-service{
-        .card-custom{
-            width: 300px;
-        }
-    }
 
     .tour-destination{
         .destination-title{
@@ -741,7 +929,7 @@ body{
                 margin: 0px;
 
                 .images{
-                        border-radius: 10px 10px 0 0;
+                    border-radius: 10px 10px 0 0;
                 }
 
                 .card-body{
@@ -789,7 +977,7 @@ body{
 
 }
 
-@media (max-width:776px){
+@media (max-width:767.5px){
     .top-menu{
         .bg-information{
             .bg-title{
@@ -805,6 +993,29 @@ body{
             }
         }
     }
+
+        .jumbotron-custom{
+            padding-top: 75px !important;
+            h1{
+                font-size: 40px;
+                font-weight: bold;  
+            }
+
+            .lead{
+                font-size: 17px;
+                line-height: 35px;
+            }
+
+            .bank{
+                font-size: 16px;
+            }
+            .search-icon{
+            
+                &.active{
+                    width: 255px !important;
+                }
+            }
+            }
 
     .tour-destination{
         .destination-details{
@@ -834,13 +1045,26 @@ body{
                 border-radius: 10px 10px 0 0;
             }
             .card-body{
+                padding: 11px;
 
+                .header{
+                        .price{
+                            left: 7px;
+                            bottom: -40px;
+                        }
+                    }
                 .footer{
                     .rating{
                         letter-spacing: normal;
+                        font-size: 16px;
+                        margin-top: 11px;
                         .btn-primary{
                             padding: 12px 35px;
                         }
+                    }
+
+                    .btn-primary{
+                        padding: 10px 19px;
                     }
                 }
                 
@@ -922,7 +1146,8 @@ body{
 
     .our-service{
         .card-custom{
-            width: 300px;
+            width: 255px;
+            height: 290px;
         }
     }
 
