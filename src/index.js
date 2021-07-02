@@ -5,15 +5,17 @@ import 'popper.js/dist/popper.min';
 import '@fortawesome/fontawesome-free/js/all';
 import "../src/sass/style.scss";
 import "animate.css";
+import ScrollReveal from 'scrollreveal';
+
 
 $(document).on("ready",function () {
-    $("a.scroll").on('click', function (event) {
+    // $("a.scroll").on('click', function (event) {
 
-        var hash = this.hash;
+    //     var hash = this.hash;
 
-        $('html, body').animate({ scrollTop: $(hash).offset().top - 90 }, 800, function () { });
+    //     $('html, body').animate({ scrollTop: $(hash).offset().top - 90 }, 800, function () { });
     
-    });
+    // });
 
 
     // التأكد من أن كلمة المرور هي نفسها في الحقلين
@@ -41,3 +43,53 @@ $(function () {
         $(".search-icon").toggleClass("active");
     });
 });
+
+/*==================== SHOW SCROLL UP ====================*/ 
+
+let UP = document.querySelector(".scrollup");
+
+window.onscroll = function () {
+    if (this.scrollY >= 200) {
+        UP.classList.add("show-scroll");
+    } else {
+        UP.classList.remove("show-scroll");
+    }
+};
+
+UP.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+};
+
+// function scrollToTop() {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth",
+//     })
+// }
+
+
+
+
+
+
+
+require('scrollreveal');
+const sr = ScrollReveal({
+    distance: '60px',
+    duration: 2800,
+    // reset: true,
+})
+
+sr.reveal(`.card,.bg-information`,{
+    origin: 'top',
+    interval: 100,
+})
+sr.reveal(`.contact,.title,.single-gallery-item`,{
+    origin: 'right',
+})
+sr.reveal(`.map`,{
+    origin: 'left',
+})
